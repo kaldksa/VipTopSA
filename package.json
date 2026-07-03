@@ -1,34 +1,44 @@
 {
   "name": "viptopsa",
   "version": "1.0.0",
-  "description": "Instagram Management Platform",
+  "description": "Instagram Content Management Platform",
   "main": "server/server.js",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server/server.js",
     "server": "nodemon server/server.js",
     "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "cd client && npm run build",
-    "start": "node server/server.js"
+    "seed": "node scripts/seed.js"
   },
-  "keywords": ["instagram", "management", "scheduling"],
-  "author": "VipTopSA",
+  "keywords": [
+    "instagram",
+    "content-management",
+    "scheduling",
+    "analytics"
+  ],
+  "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^7.0.0",
-    "dotenv": "^16.0.3",
-    "jsonwebtoken": "^9.0.0",
     "bcryptjs": "^2.4.3",
-    "axios": "^1.3.4",
-    "stripe": "^12.0.0",
     "cors": "^2.8.5",
-    "express-validator": "^7.0.0",
-    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.0",
+    "stripe": "^11.1.0",
     "nodemailer": "^6.9.1",
+    "axios": "^1.3.4",
+    "multer": "^1.4.5-lts.1",
+    "express-validator": "^7.0.0",
     "moment": "^2.29.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
     "concurrently": "^7.6.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   }
 }
